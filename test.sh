@@ -1,0 +1,1 @@
+webpack serve --live-reload --target web --mode=development --env=development --static .
