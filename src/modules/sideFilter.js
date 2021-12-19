@@ -9,19 +9,17 @@ const catalog = () => {
   const priceMinInput = document.querySelector("#min");
   const priceMaxInput = document.querySelector("#max");
   const hotSaleButton = document.querySelector("#discount-checkbox-test");
-  // let hotSaleButtonIsChecked = false;
   let optionsObj = {
     priceFrom: 0,
     priceTo: 999999999,
     sale: false,
   };
-  // console.log(hotSaleButton);
+
   priceMinInput.addEventListener("input", (event) => {
     optionsObj.priceFrom = event.target.value;
     console.log(optionsObj.priceFrom);
     if (
       !event.target.value 
-      // || typeof event.target.value !== "number"
     ) {
       optionsObj.priceFrom = 0;
     }
@@ -34,10 +32,8 @@ const catalog = () => {
   priceMaxInput.addEventListener("input", (event) => {
     
     optionsObj.priceTo = event.target.value;
-    console.log(optionsObj.priceFrom);
     if (!event.target.value ||
       event.target.value == 0
-      // || typeof event.target.value !== "number"
       ) {
       optionsObj.priceTo = 9999999;
     };
