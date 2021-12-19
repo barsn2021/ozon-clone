@@ -8,7 +8,7 @@ const catalog = () => {
   const catalogModalItems = document.querySelectorAll(".catalog li");
   const priceMinInput = document.querySelector("#min");
   const priceMaxInput = document.querySelector("#max");
-  const hotSaleButton = document.querySelector("#discount-checkbox");
+  const hotSaleButton = document.querySelector("#discount-checkbox-test");
   // let hotSaleButtonIsChecked = false;
   let optionsObj = {
     priceFrom: 0,
@@ -44,12 +44,15 @@ const catalog = () => {
     reload(optionsObj);
   });
   
-  // hotSaleButton.addEventListener('click', (btn) => {
-  //   hotSaleButton.prop("checked", true);
-  //   console.log(hotSaleButton);
-  //   sideFilter(optionsObj);
-  // })
- 
+  hotSaleButton.addEventListener('click', () => {
+    if (hotSaleButton.checked) {
+      optionsObj.sale = true;
+      console.log(hotSaleButton);
+    } else {
+      optionsObj.sale = false;
+    }
+    reload(optionsObj);
+  })
 
   function reload(optionsObj) {
     getData().then((data) => {
