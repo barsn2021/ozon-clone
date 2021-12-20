@@ -17,7 +17,6 @@ const catalog = () => {
 
   priceMinInput.addEventListener("input", (event) => {
     optionsObj.priceFrom = event.target.value;
-    console.log(optionsObj.priceFrom);
     if (
       !event.target.value 
     ) {
@@ -43,7 +42,6 @@ const catalog = () => {
   hotSaleButton.addEventListener('click', () => {
     if (hotSaleButton.checked) {
       optionsObj.sale = true;
-      console.log(hotSaleButton);
     } else {
       optionsObj.sale = false;
     }
